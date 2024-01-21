@@ -1,20 +1,15 @@
 #include<stdio.h>
 
 int factorial(int x){
-	int fact = 1;
-	int i;
-	for(i =2;i<=x;i++){
-		fact = fact*i;	
+	if(x==0||x==1){
+		return x;
 	}
-	return fact;
+	else return x*factorial(x-1);
 }
 int main(){
-	int n,r;
+	int n;
 	printf("enter value of n ");
 	scanf("%d",&n);
-	printf("enter value of r ");
-	scanf("%d",&r);
-	int npr;
-	npr = factorial(n)/(factorial(r)*factorial(n-r));
-	printf("%d",npr);
+	printf("factorial of %d is %d",n,factorial(n));
+	
 }
